@@ -11,9 +11,34 @@ This is a .NET 8 project for managing suppliers, purchase orders, and purchase r
 
 ## Project Structure
 The project follows **Clean Architecture**, divided into several layers:
-- **Domain Layer**: Contains business logic and entity definitions.
-- **Application Layer**: Implements use cases and manages services.
-- **Infrastructure Layer**: Handles database interactions with Entity Framework Core and external services.
-- **Presentation Layer**: Exposes APIs via ASP.NET Core Web API.
+- **Data Access Layer**: This layer handles interactions with the underlying data storage,
+  such as a database or external services. It includes components responsible for querying, inserting,
+  updating, and deleting data. Its purpose is to abstract the data storage implementation details and provide a consistent interface for accessing and manipulating data..
+- **Business Layer**: The business logic layer contains the core functionality and rules of the application.
+   It implements business processes, workflows, validations, and calculations. Its purpose is to enforce business rules,
+  manage data integrity, and orchestrate interactions between different parts of the system.
+- **Presentation Layer**:This layer is responsible for presenting information to the user and handling user input.
+   It includes components such as user interfaces, web pages, or API endpoints.
+  Its purpose is to interact with users and translate their actions into requests that the application can understand.
 
-### Folder Structure:
+## Prerequisites
+To run the project, you need the following:
+- [.NET 8 SDK](https://dotnet.microsoft.com/download/dotnet/8.0)
+- Entity Framework Core 8
+- SQL LocalDB or SQLite (or any SQL Server database)
+- Git for version control
+  ## Setup Instructions
+
+1. **Clone the repository**:
+    ```bash
+    git clone https://github.com/your-username/purchasing-inventory-module.git
+2. **Database Setup**:
+    If you're using **SQL LocalDB**:
+    - Update the `appsettings.json` file to reflect your database connection string.
+    - Run migrations to set up the database:
+      ```bash
+      dotnet ef migrations add initial --project .\PurchasingModule.DataAccess
+    ```
+    ```bash
+    dotnet ef database update
+    ```
