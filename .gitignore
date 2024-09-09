@@ -1,0 +1,11 @@
+PurchasingModule/.vs/
+PurchasingModule/bin/
+/PurchasingModule/DataAccess/bin/
+/PurchasingModule/DataAccess/obj
+/PurchasingModule/obj
+/PurchasingModule/PurchasingModule/bin/Debug/net8.0
+/PurchasingModule/PurchasingModule/obj
+/PurchasingModule/PurchasingModule.Business/bin/Debug/net8.0
+/PurchasingModule/PurchasingModule.Business/obj
+/PurchasingModule/DataAccess/Migrations
+/PurchasingModule/PurchasingModule/Properties
