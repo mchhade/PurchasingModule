@@ -38,7 +38,12 @@ To run the project, you need the following:
     - Run migrations to set up the database:
       ```bash
       dotnet ef migrations add initial --project .\PurchasingModule.DataAccess
+      dotnet ef database update --project .\PurchasingModule.DataAccess
+
     ```
+    4. **Run the Project**:
+    Start the web API by running the following command:
     ```bash
-    dotnet ef database update
+    dotnet run
     ```
+    
