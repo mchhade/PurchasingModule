@@ -41,9 +41,5 @@ To run the project, you need the following:
       dotnet ef database update --project .\PurchasingModule.DataAccess
 
     ```
-    4. **Run the Project**:
-    Start the web API by running the following command:
-    ```bash
-    dotnet run
-    ```
+    
     
